@@ -21,7 +21,7 @@ export async function createUser(user: CreateUserParams) {
 export async function updateUser(clerkId: string, user: UpdateUserParams) {
   try {
     await connectToDatabase();
-
+    
     const updatedUser = await 
       User.findOneAndUpdate(
         { clerkId },
